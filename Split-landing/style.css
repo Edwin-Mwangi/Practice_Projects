@@ -112,22 +112,79 @@ h1{
     background-repeat: no-repeat;
 }
 
-.hover-left .left{
-    width: var(--hover-width);
-    /* transition: width ease 1s; */
+
+
+@media (min-width: 801px){
+    .hover-left .left{
+        width: var(--hover-width);
+        /* transition: width ease 1s; */
+    }
+    
+    .hover-left .right{
+        width: var(--other-width);
+        /* transition: width ease 1s; */
+    }
+    
+    .hover-right .right{
+        width: var(--hover-width);
+        /* transition: width ease 1s; */
+    }
+    
+    .hover-right .left{
+        width: var(--other-width);
+        /* transition: width ease 1s; */
+    }
+
 }
 
-.hover-left .right{
-    width: var(--other-width);
-    /* transition: width ease 1s; */
-}
+@media (max-width: 800px){
 
-.hover-right .right{
-    width: var(--hover-width);
-    /* transition: width ease 1s; */
-}
+    h1{
+        font-size: 2rem;
+    }
 
-.hover-right .left{
-    width: var(--other-width);
-    /* transition: width ease 1s; */
+    .btn{
+        width: 10rem;
+        padding: 1rem;
+    }
+
+
+    .split{
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+    }   
+    
+    .split.right{
+        bottom: 0;
+    }
+
+    .split.left{
+        top: 0;
+    }
+
+    .btn{
+        top: 60%;
+    }
+
+    .hover-top .left{
+        height: var(--hover-width);
+        /* transition: width ease 1s; */
+    }
+    
+    .hover-top .right{
+        height: var(--other-width);
+        /* transition: width ease 1s; */
+    }
+    
+    .hover-bottom .right{
+        height: var(--hover-width);
+        /* transition: width ease 1s; */
+    }
+    
+    .hover-bottom .left{
+        height: var(--other-width);
+        /* transition: width ease 1s; */
+    }
 }
