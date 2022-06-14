@@ -9,16 +9,31 @@ jokeBtn.addEventListener('click', generateJoke)//don't include brackets in the a
 
 generateJoke()
 
-function generateJoke() {
+// function generateJoke() {
+//     const config = {
+//         headers: {
+//             Accept: 'application/json'
+//         }
+//     }
+
+//     fetch('https://icanhazdadjoke.com/', config)
+//         .then(res => res.json())
+//         .then(data => {
+//             joke.innerText = data.joke
+//         })
+// }
+
+//u can also use async
+async function generateJoke() {
     const config = {
         headers: {
             Accept: 'application/json'
         }
     }
 
-    fetch('https://icanhazdadjoke.com/', config)
-        .then(res => res.json())
-        .then(data => {
-            joke.innerText = data.joke
-        })
+    const res = await fetch('https://icanhazdadjoke.com/', config)
+        
+    const data = await res.json()
+
+    joke.innerText = data.joke
 }
